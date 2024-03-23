@@ -4,7 +4,7 @@ struct SinhVien{
         long mssv;
         char hoTen[20];
         char lop[10];
-        float CPA;
+        float GPA;
 };
 
 
@@ -19,7 +19,7 @@ int main()
     // Nhap thong tin cho sinh vien 2
 
     SinhVien sv2;
-    printf("\n\nNhap thong tin cho sinh vien 2: ");
+    printf("\n\n---------< Nhap thong tin cho sinh vien 2: >-------");
     // Nhap mssv cho sinh vien
     printf("\nNhap mssv cho sv2: ");
     scanf("%d", &sv2.mssv);
@@ -32,7 +32,7 @@ int main()
     fgets(sv2.lop, 10, stdin);
     // Nhap GPA cho sinh vien
     printf("Nhap CPA cho sv2: ");
-    scanf("%f", &sv2.CPA);
+    scanf("%f", &sv2.GPA);
 
 
     // Dung con tro? de nhap thong tin cho mang cac sinh vien
@@ -41,9 +41,10 @@ int main()
 
     // chon so sinh vien muon nhap
     int N;
-    printf("\nChon so sinh vien muon nhap thong tin(ko qua 10): ");
+    printf("\n--------< Chon so sinh vien muon nhap thong tin(ko qua 10): >----------");
     scanf("%d", &N);
 
+    // Nhap thong tin cho N sinh vien
     for(int i = 0; i < N; i++)
     {
         printf("\nNhap thong tin cho sinh vien thu %d", i +1);
@@ -59,9 +60,43 @@ int main()
         fgets((p + i)->lop, 10, stdin);
         // Nhap GPA cho sinh vien
         printf("Nhap CPA cho sv2: ");
-        scanf("%f", &((p + i ) -> CPA));
+        scanf("%f", &((p + i ) -> GPA));
+    }
+    // In thong tin cua N sinh vien
+    for(int i = 0; i < N; i++)
+    {
+        printf("\n*******In thong in cua sinh vien thu %d", i + 1);
+        // In mssv
+        printf("\nMSSV: %d", (p + i) -> mssv);
+        // In ten
+        printf("\nHo va ten: %s", (p + i) -> hoTen);
+        // In lop
+        printf("Lop: %s", (p + i) -> lop);
+        // In GPA
+        printf("GPA: %f", (p + i) -> GPA);
     }
 
+    // In thong tin cua sinh vien co GPA cao nhat
+    int index = 0; // luu thu tu cua sinh vien co GPA cao nhat
+    float max_GPA = 0.0; // luu gia tri GPA cao nhat
+    for(int i = 0; i < N; i++)
+    {
+        if((p + i) -> GPA  > max_GPA)
+        {
+            index = i;
+            max_GPA = (p + i) -> GPA;
+        }
+    }
+    printf("\n*******In thong in cua sinh vien co GPA cao nhat: ");
+        // In mssv
+    printf("\nMSSV: %d", (p + index) -> mssv);
+        // In ten
+    printf("\nHo va ten: %s", (p + index) -> hoTen);
+        // In lop
+    printf("Lop: %s", (p + index) -> lop);
+        // In GPA
+    printf("GPA: %f", (p + index) -> GPA);
 
-   
+
+
 }
