@@ -89,4 +89,20 @@ int main()
     }
     
 
+    // In thong tin sinh vien
+    for(int i = 0; i < so_sinh_vien; i++)
+    {
+        printf("\n*******In thong in cua sinh vien thu %d", i + 1);
+        // In mssv
+        printf("\n\nMSSV: %d", nhomSV[i].mssv);
+        // In ten
+        printf("\nHo va ten: %s", nhomSV[i].hoTen);
+        //In ngay sinh
+        printf("Ngay sinh: %d/%d/%d", nhomSV[i].ngay_sinh.ngay, nhomSV[i].ngay_sinh.thang, nhomSV[i].ngay_sinh.nam);
+        // In lop
+        printf("\nLop: %s", nhomSV[i].lop);
+        // In GPA
+        printf("GPA: %.2f", nhomSV[i].GPA);
+    }
+
 }
