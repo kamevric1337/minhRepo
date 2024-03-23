@@ -1,36 +1,38 @@
 #include<stdio.h>
 
- struct SinhVien{
-        char hoTen[20];
+struct SinhVien{
         long mssv;
+        char hoTen[20];
         char lop[10];
-        float gpa;
+        float CPA;
 };
+
 
 
 int main()
 {
-   
+    // Nhap truc tiep thong tin cho sinh vien 1
 
-    SinhVien sv1 = {"Tran Quang Minh", 20233536, "ETTN-K68", 3.5};
-    SinhVien sv2;
+    SinhVien sv1 = {20233536, "Tran Quang Minh", "ETTN", 3.5};
+    printf("MSSV cua Minh la: %d", sv1.mssv);
 
     // Nhap thong tin cho sinh vien 2
 
-    printf("Nhap thong tin cho sinh vien 2: ");
-    // nhap mssv
-    printf("\nNhap mssv cho sinh vien 2: ");
-    scanf("%d", sv2.mssv);
-    //nhap ten
-    printf("\nNhap ten cho sinh vien 2: ");
+    SinhVien sv2;
+    printf("\n\nNhap thong tin cho sinh vien 2: ");
+    // Nhap mssv cho sinh vien
+    printf("\nNhap mssv cho sv2: ");
+    scanf("%d", &sv2.mssv);
+    // Nhap ten cho sinh vien
+    printf("Nhap ten cho sv2: ");
     fflush(stdin);
-    fgets(sv2.hoTen, sizeof(sv2.hoTen), stdin);
-    //nhap lop 
-    printf("Nhap lop cho sinh vien 2: ");
-    fgets(sv2.lop, sizeof(sv2.lop), stdin);
-    // nhap cpa
-    printf("Nhap cpa cho sinh vien 2: ");
-    scanf("%f", sv2.gpa);
-    
+    fgets(sv2.hoTen, 20, stdin);
+    // Nhap lop cho sinh vien
+    printf("Nhap lop cho sv2: ");
+    fgets(sv2.lop, 10, stdin);
+    // Nhap GPA cho sinh vien
+    printf("Nhap CPA cho sv2: ");
+    scanf("%f", &sv2.CPA);
 
+   
 }
