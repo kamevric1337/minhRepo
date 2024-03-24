@@ -57,7 +57,7 @@ int main()
         printf("Nhap lop cho sv: ");
         fgets((p + i)->lop, 10, stdin);
         // Nhap GPA cho sinh vien
-        printf("Nhap CPA cho sv: ");
+        printf("Nhap GPA cho sv: ");
         scanf("%f", &((p + i ) -> GPA));
     }
     // In thong tin cua N sinh vien
