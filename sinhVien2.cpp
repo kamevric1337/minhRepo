@@ -1,5 +1,5 @@
 #include<stdio.h>
-#include<stdio.h>
+
 
 enum trang_thai{
     nam_thu_nhat,
