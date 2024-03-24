@@ -2,7 +2,7 @@
 
 
 enum trang_thai{
-    nam_thu_nhat,
+    nam_thu_nhat = 1,
     nam_thu_hai,
     nam_thu_ba,
     nam_thu_tu,
@@ -53,6 +53,10 @@ int main()
     // Nhap GPA cho sinh vien
     printf("Nhap CPA cho sv2: ");
     scanf("%f", &sv2.GPA);
+    // Nhap trang thai cho sinh vien
+    printf("Nhap trang thai cho sinh vien: ");
+    scanf("%d", &sv2.trang_thai);
+    
 
     SinhVien nhomSV[10];
     int so_sinh_vien;
@@ -86,6 +90,9 @@ int main()
     // Nhap GPA cho sinh vien
         printf("Nhap CPA cho sv: ");
         scanf("%f", &nhomSV[i].GPA);
+    // Nhap trang thai cho sinh vien 
+        printf("Nhap trang thai cho sinh vien: ");
+        scanf("%d", &nhomSV[i].trang_thai);
     }
     
 
@@ -103,6 +110,7 @@ int main()
         printf("\nLop: %s", nhomSV[i].lop);
         // In GPA
         printf("GPA: %.2f", nhomSV[i].GPA);
+        // In trang thai 
+        printf("\nSInh vien dang trong nam thu %d", nhomSV[i].trang_thai);
     }
-
 }
