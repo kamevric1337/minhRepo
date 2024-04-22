@@ -6,7 +6,7 @@ void negative_sort(int* array, int* negative_array, int n, int& negative_index)
     {
         if(array[i] < 0)
         {
-            negative_array [negative_index] = array[i];
+            negative_array[negative_index] = array[i];
             negative_index++;
         }
     }
@@ -18,7 +18,7 @@ void positive_sort(int* array, int* positive_array, int n, int& positive_index)
     {
         if(array[i] > 0)
         {
-            positive_array [positive_index] = array[i];
+            positive_array[positive_index] = array[i];
             positive_index++;
         }
     }
